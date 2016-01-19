@@ -80,7 +80,7 @@ class ViewController: UIViewController {
         
         musicPlay()
         
-        var x:Double = 0.3
+        var x:Double = 0.5
         
         timer = NSTimer.scheduledTimerWithTimeInterval(x, target: self, selector: "acce", userInfo: nil, repeats: true)
         
