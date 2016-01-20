@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var mixDrum:AVAudioPlayer!
     var hihat:AVAudioPlayer!
     var snareDrum:AVAudioPlayer!
+    var crash:AVAudioPlayer!
     
     var yesorno :Bool = false
     var choice :NSNumber = 0
@@ -81,6 +82,9 @@ class ViewController: UIViewController {
         
         let path5 = NSBundle.mainBundle().pathForResource("snareDrum", ofType: "mp3")
         snareDrum = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path5!), error: nil)
+        
+        let path6 = NSBundle.mainBundle().pathForResource("crash", ofType: "mp3")
+        crash = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path6!), error: nil)
 
         
         musicPlay()
@@ -151,9 +155,9 @@ class ViewController: UIViewController {
     println("ppp+\(i)")
           i++
             if choice == 0 {
-                bigDrum.stop()
-               bigDrum.currentTime = 0.0
-                bigDrum.play()
+                crash.stop()
+                crash.currentTime = 0.0
+                crash.play()
                 view.backgroundColor = UIColor.blueColor()
                 
             }
