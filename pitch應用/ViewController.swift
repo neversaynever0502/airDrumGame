@@ -58,6 +58,11 @@ class ViewController: UIViewController {
     //加速计管理者-所有的操作都会由这个motionManager接管
     var motionManager:CMMotionManager!
     
+    override func viewDidDisappear(animated: Bool) {
+       
+         music.stop()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
