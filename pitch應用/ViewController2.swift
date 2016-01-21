@@ -22,6 +22,12 @@ class ViewController2: UIViewController {
     var motionManager:CMMotionManager!
     var number:NSNumber = 0
 
+    @IBAction func touchUpInside(sender: AnyObject) {
+        number = 0
+    }
+    @IBAction func touchDown(sender: AnyObject) {
+        number = 1
+    }
     
     @IBOutlet weak var orientationLabel: UILabel!
     @IBOutlet weak var xLabel: UILabel!
@@ -36,7 +42,7 @@ class ViewController2: UIViewController {
         let path5 = NSBundle.mainBundle().pathForResource("snareDrum", ofType: "mp3")
         snareDrum = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path5!), error: nil)
 
-        var x:Double = 0.8
+        var x:Double = 0.4
         
         timer = NSTimer.scheduledTimerWithTimeInterval(x, target: self, selector: "acce", userInfo: nil, repeats: true)
         
@@ -92,18 +98,18 @@ class ViewController2: UIViewController {
 
     func acce(){
     if (self.yLabel.text!.toInt() > -75){
-//        if(self.xLabel.text!.toInt()>60){
-            if(self.zLabel.text!.toInt() < -30){
-                snareDrum.stop()
-                snareDrum.currentTime = 0.0
-                snareDrum.play()
-            }
-            else {
-                bigDrum.stop()
-                bigDrum.currentTime = 0.0
-                bigDrum.play()
-            }
-//        }
+        if(number==1){
+            println(self.zLabel.text!)
+            snareDrum.stop()
+            snareDrum.currentTime = 0.0
+            snareDrum.play()
+        }
+        else {
+            bigDrum.stop()
+            bigDrum.currentTime = 0.0
+            bigDrum.play()
+        }
+
         }
     }
     
@@ -117,7 +123,7 @@ class ViewController2: UIViewController {
         }
         else if device.orientation == UIDeviceOrientation.Portrait
         {
-               number = 0
+//               number = 0
             orientationLabel.text = "Portrait"
             
         }
@@ -127,17 +133,17 @@ class ViewController2: UIViewController {
         }
         else if device.orientation == UIDeviceOrientation.LandscapeLeft
         {
-            number = 0
+//            number = 0
             orientationLabel.text = "LandscapeLeft"
         }
         else if device.orientation ==
             UIDeviceOrientation.LandscapeRight
         {
-              number = 0
+//              number = 0
             orientationLabel.text = "LandscapeRight"
         }else if device.orientation == UIDeviceOrientation.FaceUp
         {
-            number = 1
+//            number = 1
             orientationLabel.text = "FaceUp"
             
         }
@@ -153,6 +159,23 @@ class ViewController2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - 摇晃事件
+//        override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent) {
+//    
+//            println("motionBegan")//开始摇晃
+////            if(self.zLabel.text!.toInt() < -50){
+//                  }
+//    
+//        override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+//            println("motionEnded")//摇晃结束
+//        }
+//    
+//    
+//        override func motionCancelled(motion: UIEventSubtype, withEvent event: UIEvent) {
+//            println("motionCancelled")//摇晃被意外终止
+//        }
+//
+//    
 
     /*
     // MARK: - Navigation

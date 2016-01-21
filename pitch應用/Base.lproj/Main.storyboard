@@ -40,6 +40,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LL9-8g-13O">
+                                <rect key="frame" x="0.0" y="492" width="320" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95842957454029554" green="0.78468384704221195" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="snareDrum">
+                                    <color key="titleColor" red="0.39945742005534973" green="0.21506172208406946" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchDown:" destination="tOp-JM-HZt" eventType="touchDown" id="U5l-D7-xrO"/>
+                                    <action selector="touchUpInside:" destination="tOp-JM-HZt" eventType="touchUpInside" id="20O-Dd-n70"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -130,20 +143,6 @@
                                 <color key="textColor" red="0.98043800417556981" green="1" blue="0.82622507028081571" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wBA-VB-V0x">
-                                <rect key="frame" x="118" y="324" width="177" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.91426134222175237" blue="0.56721977898757181" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="0.36432350641224764" blue="0.17502908872517964" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="hihat">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="zAp-Hz-LGk"/>
-                                    <action selector="touchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mjP-I9-gh4"/>
-                                    <action selector="touchUpOutside:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="4s6-lS-sIO"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;----- bigDrum  snareDrum----&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rPm-RU-NBN">
                                 <rect key="frame" x="-2" y="78" width="322" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -159,6 +158,20 @@
                                 </state>
                                 <connections>
                                     <segue destination="AJx-w3-Ckg" kind="modal" id="BHh-nX-6oN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wBA-VB-V0x">
+                                <rect key="frame" x="0.0" y="483" width="320" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.91426134222175237" blue="0.56721977898757181" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.36432350641224764" blue="0.17502908872517964" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Crash">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="zAp-Hz-LGk"/>
+                                    <action selector="touchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mjP-I9-gh4"/>
+                                    <action selector="touchUpOutside:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="4s6-lS-sIO"/>
                                 </connections>
                             </button>
                         </subviews>

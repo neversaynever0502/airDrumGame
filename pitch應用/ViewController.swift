@@ -87,9 +87,9 @@ class ViewController: UIViewController {
         crash = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path6!), error: nil)
 
         
-        musicPlay()
+//        musicPlay()
         
-        var x:Double = 0.4
+        var x:Double = 0.39
         
         timer = NSTimer.scheduledTimerWithTimeInterval(x, target: self, selector: "acce", userInfo: nil, repeats: true)
         
@@ -154,14 +154,14 @@ class ViewController: UIViewController {
         
     println("ppp+\(i)")
           i++
-            if choice == 0 {
+            if choice == 1 {
                 crash.stop()
                 crash.currentTime = 0.0
                 crash.play()
                 view.backgroundColor = UIColor.blueColor()
                 
             }
-            else if choice == 1{
+            else if choice == 0{
                 hihat.stop()
                 hihat.currentTime = 0.0
                 hihat.play()
