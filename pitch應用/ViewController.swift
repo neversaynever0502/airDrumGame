@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         let path = NSBundle.mainBundle().pathForResource("bigdrum", ofType: "mp3")
         bigDrum = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path!), error: nil)
         
-        let path2 = NSBundle.mainBundle().pathForResource("girl", ofType: "mp3")
+        let path2 = NSBundle.mainBundle().pathForResource("Tornado", ofType: "mp3")
         music = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path2!), error: nil)
 
         let path3 = NSBundle.mainBundle().pathForResource("over", ofType: "mp3")
@@ -87,9 +87,9 @@ class ViewController: UIViewController {
         crash = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path6!), error: nil)
 
         
-//        musicPlay()
+        musicPlay()
         
-        var x:Double = 0.39
+        var x:Double = 0.4
         
         timer = NSTimer.scheduledTimerWithTimeInterval(x, target: self, selector: "acce", userInfo: nil, repeats: true)
         
