@@ -160,6 +160,8 @@ class ViewController: UIViewController {
                 crash.play()
                 view.backgroundColor = UIColor.blueColor()
                 
+                
+                
             }
             else if choice == 0{
                 hihat.stop()

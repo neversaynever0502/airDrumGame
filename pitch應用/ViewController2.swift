@@ -42,7 +42,7 @@ class ViewController2: UIViewController {
         let path5 = NSBundle.mainBundle().pathForResource("snareDrum", ofType: "mp3")
         snareDrum = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(path5!), error: nil)
 
-        var x:Double = 0.4
+        var x:Double = 0.8
         
         timer = NSTimer.scheduledTimerWithTimeInterval(x, target: self, selector: "acce", userInfo: nil, repeats: true)
         
@@ -97,7 +97,7 @@ class ViewController2: UIViewController {
     
 
     func acce(){
-    if (self.yLabel.text!.toInt() > -75){
+    if (self.yLabel.text!.toInt() > -80){
         if(number==1){
             println(self.zLabel.text!)
             snareDrum.stop()
